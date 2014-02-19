@@ -30,9 +30,6 @@ set clipboard=unnamed             " use the system clipboard
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
 
-" put useful info in status bar
-set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
-
 " set dark background and color scheme
 set background=dark
 colorscheme base16-railscasts
