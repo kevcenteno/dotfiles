@@ -32,7 +32,7 @@ set wildmode=list:longest,full
 
 " set dark background and color scheme
 set background=dark
-colorscheme base16-railscasts
+colorscheme molokai
 
 " set up some custom colors
 highlight clear SignColumn
