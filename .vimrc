@@ -42,7 +42,7 @@ highlight LineNr       ctermbg=236 ctermfg=240
 highlight CursorLineNr ctermbg=236 ctermfg=240
 highlight CursorLine   ctermbg=236
 highlight StatusLineNC ctermbg=238 ctermfg=0
-highlight StatusLine   ctermbg=240 ctermfg=12
+highlight StatusLine   ctermbg=2   ctermfg=235
 highlight IncSearch    ctermbg=0   ctermfg=3
 highlight Search       ctermbg=0   ctermfg=9
 highlight Visual       ctermbg=3   ctermfg=0
@@ -52,8 +52,8 @@ highlight SpellBad     ctermbg=0   ctermfg=1
 
 " highlight the status bar when in insert mode
 if version >= 700
-  au InsertEnter * hi StatusLine ctermfg=235 ctermbg=2
-  au InsertLeave * hi StatusLine ctermbg=240 ctermfg=12
+  au InsertEnter * hi StatusLine ctermfg=70 ctermbg=235
+  au InsertLeave * hi StatusLine ctermbg=2 ctermfg=235
 endif
 
 " set leader key to comma
