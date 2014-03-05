@@ -11,7 +11,7 @@ set ts=2                          " set indent to 2 spaces
 set shiftwidth=2
 set expandtab                     " use spaces, not tab characters
 set nocompatible                  " don't need to be compatible with old vim
-set relativenumber                        " show relative line numbers
+set relativenumber                " show relative line numbers
 set showmatch                     " show bracket matches
 set ignorecase                    " ignore case in search
 set hlsearch                      " highlight all search matches
@@ -59,6 +59,14 @@ endif
 " set leader key to comma
 let mapleader = ","
 
+nnoremap <Leader>v :vsplit<CR>
+nnoremap <Leader>s :split<CR>
+nnoremap <Leader>, 2<C-w><
+nnoremap <Leader>. 2<C-w>>
+nnoremap <Leader>- 2<C-w>-
+nnoremap <Leader>= 2<C-w>+
+nnoremap <Leader>w <C-w>w
+
 " unmap F1 help
 nmap <F1> :echo<CR>
 imap <F1> <C-o>:echo<CR>
@@ -66,7 +74,7 @@ imap <F1> <C-o>:echo<CR>
 " map . in visual mode
 vnoremap . :norm.<cr>
 
-" die hash rockets, die!
+  " die hash rockets, die!
 vnoremap <leader>h :s/:\(\w*\) *=>/\1:/g<cr>
 
 
@@ -79,6 +87,8 @@ map <leader>x :!clear &&
 " clear the command line and search highlighting
 noremap <C-l> :nohlsearch<CR>
 
+" map ctrl-c to <esc>.  this forces InsertLeave to execute
+:ino <C-C> <Esc>
 
 " add :Plain command for converting text to plaintext
 command! Plain execute "%s/’/'/ge | %s/[“”]/\"/ge | %s/—/-/ge"
