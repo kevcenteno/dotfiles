@@ -57,7 +57,7 @@ if version >= 700
 endif
 
 " set leader key to comma
-let mapleader = ","
+let mapleader = "\<Space>"
 
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>s :split<CR>
@@ -98,3 +98,5 @@ if exists('+colorcolumn')
   set colorcolumn=80
 endif
 
+" CtrlP mapping
+nnoremap <Leader>o :CtrlP<CR>
