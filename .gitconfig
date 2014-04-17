@@ -1,0 +1,18 @@
+[user]
+  name = kevcenteno
+  email = kevin@oldeyorke.ca
+
+[core]
+  editor = vim
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+
+[pull]
+  rebase = true
+
+[color]
+  ui = true
