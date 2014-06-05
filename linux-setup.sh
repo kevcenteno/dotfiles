@@ -10,7 +10,7 @@ echo ">>>"
 # Install the things
 sudo apt-get update
 sudo apt-get -y dist-upgrade
-sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config git-core build-essential curl gcc vim xsel kupfer tmux zsh ncurses-term terminator
+sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config git-core build-essential curl gcc vim xsel kupfer tmux zsh ncurses-term terminator chromium-browser
 
 # Colors
 echo "export TERM=xterm-256color" >> $HOME/.bashrc
