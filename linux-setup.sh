@@ -11,7 +11,11 @@ echo ">>>"
 # Install the things
 sudo apt-get update
 sudo apt-get -y dist-upgrade
-sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config git-core build-essential curl gcc vim xsel kupfer tmux zsh ncurses-term terminator chromium-browser
+sudo add-apt-repository -y ppa:chris-lea/node.js
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update
+sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config git-core build-essential curl gcc vim xsel kupfer tmux zsh ncurses-term terminator nodejs google-chrome-stable
 
 # Colors
 echo "export TERM=xterm-256color" >> $HOME/.bashrc
@@ -20,11 +24,6 @@ echo "source $HOME/.bashrc" >> $HOME/.bash_profile
 
 # oh my zsh
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-
-# Node
-sudo add-apt-repository -y ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get -y install nodejs
 
 # Grunt
 sudo npm install -g grunt-cli
