@@ -13,9 +13,9 @@ sudo apt-get -y dist-upgrade
 sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config git-core build-essential curl gcc vim xsel kupfer tmux zsh ncurses-term terminator
 
 # Colors
-echo "export TERM=xterm-256color" > $HOME/.bashrc
+echo "export TERM=xterm-256color" >> $HOME/.bashrc
 source $HOME/.bashrc
-echo "source $HOME/.bashrc" > $HOME/.bash_profile
+echo "source $HOME/.bashrc" >> $HOME/.bash_profile
 
 # Node
 sudo add-apt-repository ppa:chris-lea/node.js
@@ -42,11 +42,11 @@ cd ruby-install-0.4.3/
 sudo make install
 cd ../ && rm -rf ruby-install-0.4.3 ruby-install-0.4.3.tar.gz
 
-echo "source /usr/local/share/chruby/chruby.sh" > $HOME/.zshrc
-echo "source /usr/local/share/chruby/auto.sh" > $HOME/.zshrc
+echo "source /usr/local/share/chruby/chruby.sh" >> $HOME/.zshrc
+echo "source /usr/local/share/chruby/auto.sh" >> $HOME/.zshrc
 
 ruby-install ruby 2.0.0-p353
-echo "chruby ruby-2.0.0-p353" > $HOME/.zshrc
+echo "chruby ruby-2.0.0-p353" >> $HOME/.zshrc
 
 echo ">>>"
 echo ">>> Installed the things"
