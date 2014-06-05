@@ -46,7 +46,7 @@ echo "source /usr/local/share/chruby/chruby.sh" > $HOME/.zshrc
 echo "source /usr/local/share/chruby/auto.sh" > $HOME/.zshrc
 
 ruby-install ruby 2.0.0-p353
-chruby ruby-2.0.0-p353
+echo "chruby ruby-2.0.0-p353" > $HOME/.zshrc
 
 echo ">>>"
 echo ">>> Installed the things"
