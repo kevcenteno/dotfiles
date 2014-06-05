@@ -9,7 +9,7 @@ echo ">>>"
 
 # Install the things
 sudo apt-get update
-sudo apt-get dist-upgrade
+sudo apt-get -y dist-upgrade
 sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config build-essential curl gcc vim xsel kupfer tmux zsh ncurses-term
 
 # Colors
