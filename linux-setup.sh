@@ -17,6 +17,9 @@ echo "export TERM=xterm-256color" >> $HOME/.bashrc
 source $HOME/.bashrc
 echo "source $HOME/.bashrc" >> $HOME/.bash_profile
 
+# oh my zsh
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+
 # Node
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
@@ -25,8 +28,6 @@ sudo apt-get -y install nodejs
 # Grunt
 sudo npm install -g grunt-cli
 
-# oh my zsh
-wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
 # chruby
 wget -O chruby-0.3.8.tar.gz https://github.com/postmodern/chruby/archive/v0.3.8.tar.gz
