@@ -20,7 +20,7 @@ echo "source $HOME/.bashrc" > $HOME/.bash_profile
 # Node
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
-sudo apt-get install node
+sudo apt-get -y install nodejs
 
 # Grunt
 sudo npm install -g grunt-cli
