@@ -1,21 +1,13 @@
 #!/bin/bash
 
-
-# Copy them dotfiles
-cp -r prefs/. $HOME/
-
-echo ">>>"
-echo ">>> Copied dotfiles"
-echo ">>>"
+sh ./symlink.sh
 
 # Install the things
 sudo apt-get update
 sudo apt-get -y dist-upgrade
 sudo add-apt-repository -y ppa:chris-lea/node.js
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 sudo apt-get update
-sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config git-core build-essential curl gcc vim xsel kupfer tmux zsh ncurses-term terminator nodejs google-chrome-stable
+sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config git-core build-essential curl gcc vim xsel tmux zsh ncurses-term nodejs
 
 # Colors
 echo "export TERM=xterm-256color" >> $HOME/.bashrc
