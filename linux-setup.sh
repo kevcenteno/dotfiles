@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get -y dist-upgrade
 sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get update
-sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config git-core build-essential curl gcc vim xsel tmux zsh ncurses-term nodejs
+sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config build-essential curl gcc vim xsel tmux zsh ncurses-term nodejs
 
 # Colors
 echo "export TERM=xterm-256color" >> $HOME/.bashrc

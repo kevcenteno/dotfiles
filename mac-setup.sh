@@ -3,11 +3,12 @@
 # Symlink
 sh ./symlink.sh
 
-# Homebrew
-echo "Installing homebrew and common formulae"
+# Common Formulae
+echo "Installing common formulae"
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 brew doctor
-brew install git chruby ruby-install zsh node vim tmux
+brew install chruby ruby-install zsh node vim tmux
+sudo mv /usr/bin/vim /usr/bin/vim72
 
 # change default shell to zsh
 echo "Change default shell to zsh"
