@@ -1,8 +1,13 @@
-Usage
+## Usage
 
-    wget -qO- -O dotfiles-master.zip https://github.com/kevcenteno/dotfiles/archive/master.zip && unzip dotfiles-master.zip && rm dotfiles-master.zip
-    cd dotfiles-master
-    sudo chmod +x linux-setup.sh
+    git clone git@github.com:kevcenteno/dotfiles.git ~/dotfiles
+    cd ~/dotfiles
+
+    ### Mac
+    chmod +x mac-setup.sh
+    ./mac-setup.sh
+
+    ### Ubuntu
+    chmod +x linux-setup.sh
     ./linux-setup.sh
 
- Done!
