@@ -1,8 +1,25 @@
-Usage
+## Usage
 
-    wget -qO- -O dotfiles-master.zip https://github.com/kevcenteno/dotfiles/archive/master.zip && unzip dotfiles-master.zip && rm dotfiles-master.zip
-    cd dotfiles-master
-    sudo chmod +x linux-setup.sh
-    ./linux-setup.sh
+### Mac
 
- Done!
+```
+### Install homebrew and Git
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+brew doctor
+brew install git
+```
+
+### Linux
+
+```
+### Install Git
+sudo apt-get install git-core
+```
+
+### Common
+
+```
+git clone git@github.com:kevcenteno/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+sh ./setup.sh
+```
