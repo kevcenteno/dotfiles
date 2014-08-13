@@ -5,9 +5,7 @@ sh ./symlink.sh
 
 # Common Formulae
 echo "Installing common formulae"
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
-brew doctor
-brew install chruby ruby-install zsh node vim tmux
+brew install chruby ruby-install zsh node vim tmux wget
 sudo mv /usr/bin/vim /usr/bin/vim72
 
 # change default shell to zsh
@@ -25,14 +23,7 @@ npm install -g generator-angular
 
 # oh my zsh
 echo "Installing oh my zsh"
-wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-
-# setting up chruby
-echo -n "Setting up chruby ..."
-echo "source /usr/local/share/chruby/chruby.sh" >> $HOME/.zshrc
-echo "source /usr/local/share/chruby/auto.sh" >> $HOME/.zshrc
-echo "chruby ruby-2.0.0" >> $HOME/.zshrc
-echo "done"
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 echo "#######"
 echo "#######"
