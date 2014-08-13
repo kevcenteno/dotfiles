@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get -y dist-upgrade
 sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get update
-sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config build-essential curl gcc vim xsel tmux zsh ncurses-term nodejs
+sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config build-essential curl gcc vim xsel tmux zsh ncurses-term nodejs silversearcher-ag
 
 # Colors
 echo "export TERM=xterm-256color" >> $HOME/.bashrc
@@ -15,7 +15,7 @@ source $HOME/.bashrc
 echo "source $HOME/.bashrc" >> $HOME/.bash_profile
 
 # oh my zsh
-wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 # Grunt
 sudo npm install -g grunt-cli
@@ -33,9 +33,6 @@ tar -xzvf ruby-install-0.4.3.tar.gz
 cd ruby-install-0.4.3/
 sudo make install
 cd ../ && rm -rf ruby-install-0.4.3 ruby-install-0.4.3.tar.gz
-
-echo "source /usr/local/share/chruby/chruby.sh" >> $HOME/.zshrc
-echo "source /usr/local/share/chruby/auto.sh" >> $HOME/.zshrc
 
 # Prompt to install Ruby
 
