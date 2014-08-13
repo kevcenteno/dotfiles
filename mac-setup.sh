@@ -5,7 +5,7 @@ sh ./symlink.sh
 
 # Common Formulae
 echo "Installing common formulae"
-brew install chruby ruby-install zsh node vim tmux wget
+brew install chruby ruby-install zsh node vim tmux wget the_silver_searcher
 sudo mv /usr/bin/vim /usr/bin/vim72
 
 # change default shell to zsh
