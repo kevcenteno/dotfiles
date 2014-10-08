@@ -5,6 +5,7 @@ sh ./symlink.sh
 # Install the things
 sudo apt-get update
 sudo apt-get -y dist-upgrade
+sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config build-essential curl gcc vim xsel tmux zsh ncurses-term nodejs silversearcher-ag
