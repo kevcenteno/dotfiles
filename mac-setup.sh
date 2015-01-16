@@ -13,8 +13,8 @@ echo "Change default shell to zsh"
 chsh -s /usr/local/bin/zsh $USER
 
 # ruby versions
-echo "Ruby install 2.0.0"
-ruby-install ruby 2.0.0
+echo "Ruby install 2.1.2"
+ruby-install ruby 2.1.2
 
 # node packages
 echo "Installing yeoman and angular generator"
