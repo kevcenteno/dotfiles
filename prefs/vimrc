@@ -9,6 +9,7 @@ call pathogen#helptags()
 syntax on                         " show syntax highlighting
 filetype plugin indent on
 set autoindent                    " set auto indent
+set backspace=indent,eol,start    " fix backspace behavior
 set ts=2                          " set indent to 2 spaces
 set shiftwidth=2
 set expandtab                     " use spaces, not tab characters
