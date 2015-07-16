@@ -11,15 +11,15 @@ sudo apt-get update
 sudo apt-get install -y python-software-properties python g++ make libssl-dev pkg-config build-essential curl gcc vim xsel tmux zsh ncurses-term nodejs silversearcher-ag
 
 # Colors
-echo "export TERM=xterm-256color" >> $HOME/.bashrc
-source $HOME/.bashrc
-echo "source $HOME/.bashrc" >> $HOME/.bash_profile
+#echo "export TERM=xterm-256color" >> $HOME/.bashrc
+#source $HOME/.bashrc
+#echo "source $HOME/.bashrc" >> $HOME/.bash_profile
 
 # oh my zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 # Grunt
-sudo npm install -g grunt-cli
+#sudo npm install -g grunt-cli
 
 # chruby
 wget -O chruby-0.3.8.tar.gz https://github.com/postmodern/chruby/archive/v0.3.8.tar.gz

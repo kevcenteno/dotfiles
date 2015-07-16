@@ -86,3 +86,10 @@ export LANGUAGE=en_US.UTF-8
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 chruby ruby-2.1.2
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+chruby ruby-
+chruby ruby-
+chruby ruby-
+chruby ruby-
