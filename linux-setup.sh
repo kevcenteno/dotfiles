@@ -35,8 +35,10 @@ cd ruby-install-0.4.3/
 sudo make install
 cd ../ && rm -rf ruby-install-0.4.3 ruby-install-0.4.3.tar.gz
 
-# Prompt to install Ruby
+# Trash
+sudo npm install -g trash
 
+# Prompt to install Ruby
 function install_ruby {
   ruby-install ruby $1;
   echo "chruby ruby-$1" >> $HOME/.zshrc;
