@@ -20,6 +20,7 @@ ruby-install ruby 2.1.2
 echo "Installing yeoman and angular generator"
 npm install -g yo
 npm install -g generator-angular
+npm install -g trash
 
 # oh my zsh
 echo "Installing oh my zsh"
