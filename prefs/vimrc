@@ -75,8 +75,11 @@ imap <F1> <C-o>:echo<CR>
 " map . in visual mode
 vnoremap . :norm.<cr>
 
-  " die hash rockets, die!
+" die hash rockets, die!
 vnoremap <leader>h :s/:\(\w*\) *=>/\1:/g<cr>
+
+" <leader><leader> to switch to last buffer
+nnoremap <leader><leader> <c-^>
 
 
 " check code complexity and duplication for current file
@@ -99,9 +102,11 @@ if exists('+colorcolumn')
   set colorcolumn=80
 endif
 
-" CtrlP
-nnoremap <Leader>o :CtrlP<CR>
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard | grep -v "node_modules"', 'find %s -type f']
-let g:ctrlp_use_caching = 0
+" CommandT
+nnoremap <Leader>o :CommandT<CR>
+let g:CommandTFileScanner='git'
 
+" Silversearcher
 nnoremap <Leader>f :Ag --nogroup --column<space>
+
+

@@ -1,3 +1,6 @@
 [submodule "prefs/vim/bundle/vim-polyglot"]
 	path = prefs/vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "prefs/vim/bundle/command-t"]
+	path = prefs/vim/bundle/command-t
+	url = https://github.com/wincent/command-t.git
