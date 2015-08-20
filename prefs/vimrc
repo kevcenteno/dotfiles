@@ -105,6 +105,10 @@ endif
 " CommandT
 nnoremap <Leader>o :CommandT<CR>
 let g:CommandTFileScanner='git'
+if &term =~ "xterm" || &term =~ "screen"
+  let g:CommandTCancelMap = ['<ESC>', '<C-c>']
+endif
+let g:CommandTMaxHeight = 30
 
 " Silversearcher
 nnoremap <Leader>f :Ag --nogroup --column<space>
