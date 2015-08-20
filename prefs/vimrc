@@ -30,6 +30,7 @@ set list listchars=tab:»-         " show extra space characters
 set nofoldenable                  " disable code folding
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
+set wildignore+=**/node_modules/**,**/bower_components/**,**/.tmp/**,**/dist/**
 
 " set dark background and color scheme
 set background=dark
@@ -104,7 +105,7 @@ endif
 
 " CommandT
 nnoremap <Leader>o :CommandT<CR>
-let g:CommandTFileScanner='git'
+"let g:CommandTFileScanner='git'
 if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTCancelMap = ['<ESC>', '<C-c>']
 endif
