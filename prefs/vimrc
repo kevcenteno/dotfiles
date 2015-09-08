@@ -105,7 +105,6 @@ endif
 
 " CommandT
 nnoremap <Leader>o :CommandT<CR>
-let g:CommandTFileScanner='git'
 if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTCancelMap = ['<ESC>', '<C-c>']
 endif
