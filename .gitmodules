@@ -4,3 +4,6 @@
 [submodule "prefs/vim/bundle/command-t"]
 	path = prefs/vim/bundle/command-t
 	url = https://github.com/wincent/command-t.git
+[submodule "prefs/vim/bundle/ale"]
+	path = prefs/vim/bundle/ale
+	url = https://github.com/w0rp/ale
