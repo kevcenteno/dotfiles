@@ -49,7 +49,7 @@ highlight IncSearch    ctermbg=0     ctermfg=3
 highlight Search       ctermbg=0     ctermfg=9
 highlight Visual       ctermbg=3     ctermfg=0
 highlight Pmenu        ctermbg=242   ctermfg=0
-highlight PmenuSel     ctermbg=62     ctermfg=15
+highlight PmenuSel     ctermbg=62    ctermfg=15
 highlight SpellBad     ctermbg=0     ctermfg=1
 
 " highlight the status bar when in insert mode
@@ -119,3 +119,5 @@ set noshowmode shortmess+=c
 set completeopt-=preview
 set completeopt+=menuone,noinsert,noselect
 
+" Ale
+let g:ale_sign_column_always = 1
