@@ -19,6 +19,7 @@ BULLETTRAIN_GIT_FG=white
 BULLETTRAIN_GIT_CLEAN=" %F{green}✔%F{white}"
 BULLETTRAIN_GIT_DIRTY=" %F{yellow}✘%F{white}"
 BULLETTRAIN_GIT_MODIFIED=" %F{117}✹%F{white}"
+BULLETTRAIN_RUBY_SHOW=false
 
 
 # Uncomment the following line to use case-sensitive completion.

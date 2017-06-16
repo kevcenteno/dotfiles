@@ -40,17 +40,17 @@ colorscheme molokai
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
 highlight ColorColumn  ctermbg=237
-highlight LineNr       ctermbg=236 ctermfg=240
-highlight CursorLineNr ctermbg=236 ctermfg=240
+highlight LineNr       ctermbg=236   ctermfg=240
+highlight CursorLineNr ctermbg=236   ctermfg=240
 highlight CursorLine   ctermbg=236
-highlight StatusLineNC ctermbg=238 ctermfg=0
-highlight StatusLine   ctermbg=2   ctermfg=235
-highlight IncSearch    ctermbg=0   ctermfg=3
-highlight Search       ctermbg=0   ctermfg=9
-highlight Visual       ctermbg=3   ctermfg=0
-highlight Pmenu        ctermbg=240 ctermfg=12
-highlight PmenuSel     ctermbg=0   ctermfg=3
-highlight SpellBad     ctermbg=0   ctermfg=1
+highlight StatusLineNC ctermbg=238   ctermfg=0
+highlight StatusLine   ctermbg=2     ctermfg=235
+highlight IncSearch    ctermbg=0     ctermfg=3
+highlight Search       ctermbg=0     ctermfg=9
+highlight Visual       ctermbg=3     ctermfg=0
+highlight Pmenu        ctermbg=242   ctermfg=0
+highlight PmenuSel     ctermbg=62    ctermfg=15
+highlight SpellBad     ctermbg=0     ctermfg=1
 
 " highlight the status bar when in insert mode
 if version >= 700
@@ -113,4 +113,11 @@ let g:CommandTMaxHeight = 30
 " Silversearcher
 nnoremap <Leader>f :Ag --nogroup --column<space>
 
+" MUcomplete
+let g:mucomplete#enable_auto_at_startup = 1
+set noshowmode shortmess+=c
+set completeopt-=preview
+set completeopt+=menuone,noinsert,noselect
 
+" Ale
+let g:ale_sign_column_always = 1

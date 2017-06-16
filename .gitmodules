@@ -7,3 +7,6 @@
 [submodule "prefs/vim/bundle/ale"]
 	path = prefs/vim/bundle/ale
 	url = https://github.com/w0rp/ale
+[submodule "prefs/vim/bundle/vim-mucomplete"]
+	path = prefs/vim/bundle/vim-mucomplete
+	url = https://github.com/lifepillar/vim-mucomplete.git
