@@ -121,3 +121,8 @@ set completeopt+=menuone,noinsert,noselect
 
 " Ale
 let g:ale_sign_column_always = 1
+
+" tsuquyomi
+let g:tsuquyomi_completion_detail = 1
+let g:tsuquyomi_use_dev_node_module = 1
+
