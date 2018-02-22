@@ -19,7 +19,16 @@ BULLETTRAIN_GIT_FG=white
 BULLETTRAIN_GIT_CLEAN=" %F{green}✔%F{white}"
 BULLETTRAIN_GIT_DIRTY=" %F{yellow}✘%F{white}"
 BULLETTRAIN_GIT_MODIFIED=" %F{117}✹%F{white}"
-BULLETTRAIN_RUBY_SHOW=false
+BULLETTRAIN_NVM_FG=235
+
+BULLETTRAIN_PROMPT_ORDER=(
+status
+custom
+context
+dir
+nvm
+git
+)
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -100,10 +109,12 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+export TERM=xterm-256color
+[ -n "$TMUX" ] && export TERM=screen-256color
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby ruby-2.1.2
+chruby 2.4.2
 
 export NVM_DIR="/home/kcenteno/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
