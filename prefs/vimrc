@@ -2,12 +2,14 @@
 scriptencoding utf-8
 set encoding=utf-8
 
-" load up pathogen and all bundles
-call pathogen#infect()
-call pathogen#helptags()
-
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 syntax on                         " show syntax highlighting
@@ -105,19 +107,11 @@ command! Plain execute "%s/’/'/ge | %s/[“”]/\"/ge | %s/—/-/ge"
 
 " hint to keep lines short
 if exists('+colorcolumn')
-  set colorcolumn=80
+  set colorcolumn=100
 endif
 
-" CommandT
-nnoremap <Leader>o :CommandT<CR>
-if &term =~ "xterm" || &term =~ "screen"
-  let g:CommandTCancelMap = ['<ESC>', '<C-c>']
-endif
-let g:CommandTMaxHeight = 30
-let g:CommandTMatchWindowReverse = 0
-
-" Silversearcher
-nnoremap <Leader>f :Ag --nogroup --column<space>
+" fzf
+nnoremap <Leader>o :FZF<CR>
 
 " MUcomplete
 let g:mucomplete#enable_auto_at_startup = 1
