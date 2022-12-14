@@ -6,6 +6,10 @@ set encoding=utf-8
 call pathogen#infect()
 call pathogen#helptags()
 
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
 syntax on                         " show syntax highlighting
 filetype plugin indent on
 set autoindent                    " set auto indent
@@ -14,7 +18,7 @@ set ts=2                          " set indent to 2 spaces
 set shiftwidth=2
 set expandtab                     " use spaces, not tab characters
 set nocompatible                  " don't need to be compatible with old vim
-set relativenumber                " show relative line numbers
+set number                        " show line numbers
 set showmatch                     " show bracket matches
 set ignorecase                    " ignore case in search
 set hlsearch                      " highlight all search matches
@@ -30,7 +34,8 @@ set list listchars=tab:»-         " show extra space characters
 set nofoldenable                  " disable code folding
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
-set wildignore+=**/node_modules/**,**/bower_components/**,**/.tmp/**,**/dist/**
+set wildignore+=*/node_modules/*,*/bower_components/*,*/.tmp/*,*/dist/*,*.tgz,*.gz
+set updatetime=300
 
 " set dark background and color scheme
 set background=dark
@@ -109,6 +114,7 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTCancelMap = ['<ESC>', '<C-c>']
 endif
 let g:CommandTMaxHeight = 30
+let g:CommandTMatchWindowReverse = 0
 
 " Silversearcher
 nnoremap <Leader>f :Ag --nogroup --column<space>
@@ -122,7 +128,25 @@ set completeopt+=menuone,noinsert,noselect
 " Ale
 let g:ale_sign_column_always = 1
 
-" tsuquyomi
-let g:tsuquyomi_completion_detail = 1
-let g:tsuquyomi_use_dev_node_module = 1
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Remap for rename current word
+nmap <F2> <Plug>(coc-rename)
 
