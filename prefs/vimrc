@@ -13,6 +13,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 syntax on                         " show syntax highlighting
+set re=0                          " Fix slow typescript syntax regex
 filetype plugin indent on
 set autoindent                    " set auto indent
 set backspace=indent,eol,start    " fix backspace behavior
