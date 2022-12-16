@@ -10,6 +10,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 syntax on                         " show syntax highlighting
@@ -116,7 +117,7 @@ let g:polyglot_disabled = ['go']
 
 
 " fzf
-nnoremap <Leader>o :FZF<CR>
+nnoremap <Leader>o :GFiles --cached --others --exclude-standard<CR>
 
 set noshowmode shortmess+=c
 set completeopt-=preview
