@@ -55,8 +55,8 @@ highlight StatusLine   ctermbg=2     ctermfg=235
 highlight IncSearch    ctermbg=0     ctermfg=3
 highlight Search       ctermbg=0     ctermfg=9
 highlight Visual       ctermbg=3     ctermfg=0
-highlight Pmenu        ctermbg=242   ctermfg=0
-highlight PmenuSel     ctermbg=62    ctermfg=15
+highlight Pmenu        ctermbg=17    ctermfg=15
+highlight CocMenuSel   ctermbg=62    ctermfg=15
 highlight SpellBad     ctermbg=0     ctermfg=1
 
 " highlight the status bar when in insert mode
@@ -163,4 +163,3 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
-
