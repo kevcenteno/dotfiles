@@ -111,6 +111,10 @@ if exists('+colorcolumn')
   set colorcolumn=100
 endif
 
+" polyglot
+let g:polyglot_disabled = ['go']
+
+
 " fzf
 nnoremap <Leader>o :FZF<CR>
 
@@ -120,6 +124,10 @@ set completeopt+=menuone,noinsert,noselect
 
 " Ale
 let g:ale_sign_column_always = 1
+
+" Coc
+let g:coc_global_extensions = ['coc-css', 'coc-go', 'coc-json', 'coc-tsserver']
+autocmd FileType scss setl iskeyword+=@-@
 
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
