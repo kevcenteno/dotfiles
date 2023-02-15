@@ -13,7 +13,7 @@
   br = branch
 
 [pull]
-  rebase = preserve 
+  rebase = merges 
 
 [color]
   ui = true
