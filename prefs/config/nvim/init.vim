@@ -6,7 +6,6 @@ let g:polyglot_disabled = ['go']
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -124,7 +123,7 @@ set completeopt-=preview
 set completeopt+=menuone,noinsert,noselect
 
 " Ale
-let g:ale_sign_column_always = 1
+" let g:ale_sign_column_always = 1
 
 " Coc
 let g:coc_global_extensions = ['coc-css', 'coc-go', 'coc-json', 'coc-tsserver', 'coc-prettier']
