@@ -1,6 +1,8 @@
-" .vimrc
 scriptencoding utf-8
 set encoding=utf-8
+
+" polyglot
+let g:polyglot_disabled = ['go']
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -112,8 +114,6 @@ if exists('+colorcolumn')
   set colorcolumn=100
 endif
 
-" polyglot
-let g:polyglot_disabled = ['go']
 
 
 " fzf
