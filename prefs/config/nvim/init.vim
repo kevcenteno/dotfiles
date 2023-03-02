@@ -41,6 +41,7 @@ set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
 set wildignore+=*/node_modules/*,*/bower_components/*,*/.tmp/*,*/dist/*,*.tgz,*.gz
 set updatetime=300
+set mouse=
 
 " set dark background and color scheme
 set background=dark
