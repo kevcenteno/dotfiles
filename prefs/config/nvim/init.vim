@@ -12,6 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'github/copilot.vim'
 call plug#end()
 
 syntax on                         " show syntax highlighting
@@ -41,6 +42,7 @@ set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
 set wildignore+=*/node_modules/*,*/bower_components/*,*/.tmp/*,*/dist/*,*.tgz,*.gz
 set updatetime=300
+set signcolumn=yes
 set mouse=
 
 " set dark background and color scheme
@@ -62,6 +64,8 @@ highlight Visual       ctermbg=3     ctermfg=0
 highlight Pmenu        ctermbg=17    ctermfg=15
 highlight CocMenuSel   ctermbg=62    ctermfg=15
 highlight SpellBad     ctermbg=0     ctermfg=1
+
+au BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
 
 " highlight the status bar when in insert mode
 if version >= 700
@@ -127,7 +131,7 @@ set completeopt+=menuone,noinsert,noselect
 " let g:ale_sign_column_always = 1
 
 " Coc
-let g:coc_global_extensions = ['coc-css', 'coc-go', 'coc-json', 'coc-tsserver', 'coc-prettier']
+let g:coc_global_extensions = ['coc-css', 'coc-go', 'coc-json', 'coc-tsserver', 'coc-prettier', 'coc-eslint']
 autocmd FileType scss setl iskeyword+=@-@
 
 inoremap <silent><expr> <TAB>
@@ -173,3 +177,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
+
+" Remap for copilot
+imap <silent><script><expr> <C-h> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
