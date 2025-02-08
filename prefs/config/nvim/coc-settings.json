@@ -1,7 +1,11 @@
 {
   "eslint.autoFixOnSave": true,
+  "prettier.enable": true,
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
   "suggest.noselect": true,
-  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "javascript", "html"]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "not_typescript"
+  ],
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/18.1.3/clangd_18.1.3/bin/clangd",
 }
