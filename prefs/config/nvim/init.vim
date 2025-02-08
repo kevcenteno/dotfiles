@@ -49,6 +49,7 @@ set mouse=
 set background=dark
 colorscheme molokai
 
+
 " set up some custom colors
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
@@ -174,9 +175,14 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <Leader>j <Plug>(coc-diagnostic-next)
+nmap <silent> <Leader>k <Plug>(coc-diagnostic-prev)
 
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
+
+" Golang: save on import
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 " Remap for copilot
 imap <silent><script><expr> <C-h> copilot#Accept("\<CR>")

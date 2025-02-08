@@ -2,5 +2,5 @@
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
   "suggest.noselect": true,
-  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact"]
+  "coc.preferences.formatOnSaveFiletypes": ["typescripts", "typescriptreact"]
 }
