@@ -132,7 +132,7 @@ set completeopt+=menuone,noinsert,noselect
 " let g:ale_sign_column_always = 1
 
 " Coc
-let g:coc_global_extensions = ['coc-css', 'coc-go', 'coc-json', 'coc-tsserver', 'coc-prettier', 'coc-eslint']
+let g:coc_global_extensions = ['coc-css', 'coc-go', 'coc-json', 'coc-tsserver', 'coc-prettier', 'coc-eslint', 'coc-pyright']
 autocmd FileType scss setl iskeyword+=@-@
 
 inoremap <silent><expr> <TAB>

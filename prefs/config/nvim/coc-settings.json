@@ -3,9 +3,16 @@
   "prettier.enable": true,
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
+  "pyright.inlayHints.functionReturnTypes": false,
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.parameterTypes": false,
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "${env:HOME}/.pyenv/shims/black",
+  "python.venvPath": "${env:HOME}/.pyenv/versions",
   "suggest.noselect": true,
   "coc.preferences.formatOnSaveFiletypes": [
-    "not_typescript"
+    "not_typescript",
+    "python"
   ],
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/18.1.3/clangd_18.1.3/bin/clangd",
 }
