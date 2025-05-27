@@ -1,3 +1,16 @@
+-- Highlight Pmenu (Popup menu background, e.g., for autocompletion)
+vim.api.nvim_set_hl(0, "CocFloating", {
+  bg = "#06065E", -- Background: dark blue
+  fg = "#FFFFFF", -- Foreground: white
+})
+
+-- Highlight CocMenuSel (Selection in Coc.nvim's completion menu)
+vim.api.nvim_set_hl(0, "CocMenuSel", {
+  bg = "#5F87AF", -- Background: medium blue/grey
+  fg = "#FFFFFF", -- Foreground: white
+})
+
+-- Set up status line colors
 vim.api.nvim_set_hl(0, "StatusLine", { bg = "#1C1C1C", fg = "#87D700" })
 vim.api.nvim_create_augroup("StatuslineModeHighlight", { clear = true })
 

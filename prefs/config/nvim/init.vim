@@ -62,8 +62,6 @@ highlight StatusLineNC ctermbg=238   ctermfg=0
 highlight IncSearch    ctermbg=0     ctermfg=3
 highlight Search       ctermbg=0     ctermfg=9
 highlight Visual       ctermbg=3     ctermfg=0
-highlight Pmenu        ctermbg=17    ctermfg=15
-highlight CocMenuSel   ctermbg=62    ctermfg=15
 highlight SpellBad     ctermbg=0     ctermfg=1
 
 au BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
