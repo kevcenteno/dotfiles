@@ -13,6 +13,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'github/copilot.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 syntax on                         " show syntax highlighting
@@ -187,3 +188,5 @@ autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.org
 " Remap for copilot
 imap <silent><script><expr> <C-h> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
+
+lua require'configs/treesitter'
