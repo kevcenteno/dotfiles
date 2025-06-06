@@ -6,6 +6,7 @@
   "pyright.inlayHints.functionReturnTypes": false,
   "pyright.inlayHints.variableTypes": false,
   "pyright.inlayHints.parameterTypes": false,
+  "pyright.organizeimports.provider": "isort",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "${env:HOME}/.pyenv/shims/black",
   "python.venvPath": "${env:HOME}/.pyenv/versions",
