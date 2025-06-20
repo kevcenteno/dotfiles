@@ -29,3 +29,8 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   end,
   desc = "Revert StatusLine to Normal mode colors", -- Optional description
 })
+-- Set background
+vim.api.nvim_set_hl(0, "Normal", { bg = "#0d0c0b", fg = "#FFFFFF" }) -- Normal text color
+
+-- Set highlight for when in visual mode
+vim.api.nvim_set_hl(0, "Visual", { bg = "#FAB52A", fg = "#222222" }) -- Visual mode highlight

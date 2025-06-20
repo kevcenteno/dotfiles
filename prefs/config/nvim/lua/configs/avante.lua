@@ -16,16 +16,23 @@ require'copilot'.setup {
   }
 }
 
+require('render-markdown').setup {
+  file_types = { "Avante" },
+}
+
 require'avante'.setup {
   provider = "copilot",
   providers = {
     copilot = {
-      model = "claude-3.7-sonnet",
+      model = "gemini-2.5-pro",
     },
   },
   mappings = {
     submit = {
-      insert = "<C-h>",
+      insert = "<CR>",
     },
-  }
+  },
+  windows = {
+    position = "left",
+  },
 }
