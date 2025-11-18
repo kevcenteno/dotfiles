@@ -13,14 +13,16 @@ config.audible_bell = 'Disabled'
 config.use_fancy_tab_bar = false
 config.tab_max_width = 100
 
-config.font = wezterm.font("Hack", {weight="Regular", stretch="Normal", style="Normal"}) -- /usr/share/fonts/truetype/hack/Hack-Regular.ttf, FontConfig
-config.font_size = 10
+--config.font = wezterm.font("Hack", {weight="Regular", stretch="Normal", style="Normal"}) -- /usr/share/fonts/truetype/hack/Hack-Regular.ttf, FontConfig
+config.font = wezterm.font("TX-02", {weight="Regular", stretch="Normal", style="Normal"}) -- /usr/share/fonts/truetype/hack/Hack-Regular.ttf, FontConfig
+--config.font = wezterm.font("Berkeley Mono", {weight="Regular", stretch="Normal", style="Normal"}) -- /usr/share/fonts/truetype/hack/Hack-Regular.ttf, FontConfig
+--config.font = wezterm.font("CommitMono", {weight="Regular", stretch="Normal", style="Normal"}) -- /usr/share/fonts/truetype/hack/Hack-Regular.ttf, FontConfig
+config.font_size = 11
 
 config.default_prog = { 'zsh', '-l' }
 
 local act = wezterm.action
-config.keys = {
-  {
+config.keys = {{
     key = 'E',
     mods = 'CTRL|SHIFT',
     action = act.PromptInputLine {
@@ -33,9 +35,10 @@ config.keys = {
           window:active_tab():set_title(line)
         end
       end),
-    },
+    }, -- <--- CLOSING BRACE WAS MISSING HERE, CAUSING THE ERROR
   },
   { key = "Insert", mods = "SHIFT", action = act.PasteFrom("Clipboard") },
+  { key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}}, -- <--- MOVED OUTSIDE THE FIRST ACTION
 }
 
 config.mouse_bindings = {
