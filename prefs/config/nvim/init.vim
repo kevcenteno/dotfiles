@@ -13,22 +13,8 @@ Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'github/copilot.vim'
-
-" Deps for avante
+Plug 'github/copilot.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'stevearc/dressing.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'MunifTanjim/nui.nvim'
-Plug 'MeanderingProgrammer/render-markdown.nvim'
-
-" Optional deps for avante
-Plug 'hrsh7th/nvim-cmp'
-Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
-Plug 'HakonHarnes/img-clip.nvim'
-Plug 'zbirenbaum/copilot.lua'
-
-Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 call plug#end()
 
 syntax on                         " show syntax highlighting
@@ -197,4 +183,3 @@ let g:copilot_no_tab_map = v:true
 
 lua require'configs/treesitter'
 lua require'configs/colors'
-lua require'configs/avante'
