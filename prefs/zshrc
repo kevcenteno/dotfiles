@@ -22,6 +22,7 @@ BULLETTRAIN_GIT_MODIFIED=" %F{117}✹%F{white}"
 BULLETTRAIN_NVM_FG=235
 
 BULLETTRAIN_PROMPT_ORDER=(
+time
 status
 custom
 context
@@ -120,20 +121,6 @@ alias vimdiff="nvim -d"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-#export TERM=xterm-256color
-#[ -n "$TMUX" ] && export TERM=screen-256color
-
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv >/dev/null 2>&1; then
-  eval "$(pyenv init - zsh)"
-  eval "$(pyenv virtualenv-init -)"
-fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # opencode
 export PATH=/home/kevin/.opencode/bin:$PATH
