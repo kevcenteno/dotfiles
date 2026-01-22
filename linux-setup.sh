@@ -24,6 +24,9 @@ sudo apt-get update && sudo apt-get install -y \
   vim \
   zsh
 
+# zsh is the default shell
+sudo chsh -s $(which zsh) $(whoami)
+
 # oh my zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -38,7 +41,11 @@ curl -L http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bul
 # Symlink config files
 sh ./symlink.sh
 
-sudo chsh -s $(which zsh) $(whoami)
+# Use mise to install runtimes
+curl https://mise.run | sh
+eval "$(~/.local/bin/mise activate bash)"
+mise use -g go@latest
+mise use -g node@lts
 
 echo ">>>"
 echo ">>> Installed the things"
