@@ -181,5 +181,4 @@ autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.org
 imap <silent><script><expr> <C-h> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 
-lua require'configs/treesitter'
 lua require'configs/colors'
