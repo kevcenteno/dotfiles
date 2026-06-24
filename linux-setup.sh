@@ -58,6 +58,9 @@ mise use -g go@latest
 mise use -g node@lts
 npm install -g tree-sitter-cli
 
+# workmux
+curl -fsSL https://raw.githubusercontent.com/raine/workmux/main/scripts/install.sh | bash
+
 echo ">>>"
 echo ">>> Installed the things"
 echo ">>>"
