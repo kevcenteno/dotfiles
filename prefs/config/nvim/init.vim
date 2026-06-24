@@ -14,7 +14,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'github/copilot.vim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'romus204/tree-sitter-manager.nvim'
 call plug#end()
 
 syntax on                         " show syntax highlighting
@@ -182,3 +182,4 @@ imap <silent><script><expr> <C-h> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 
 lua require'configs/colors'
+lua require'configs/treesitter-manager'
