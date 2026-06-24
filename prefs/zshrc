@@ -147,6 +147,11 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # mise
 eval "$(~/.local/bin/mise activate zsh)"
 
