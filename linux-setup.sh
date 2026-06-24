@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Install the things
-sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update && sudo apt-get install -y \
   build-essential \
   cmake \
@@ -13,7 +12,6 @@ sudo apt-get update && sudo apt-get install -y \
   jq \
   make \
   ncurses-term \
-  neovim \
   pkg-config \
   python3 \
   python3-pip \
@@ -23,6 +21,18 @@ sudo apt-get update && sudo apt-get install -y \
   tmux \
   vim \
   zsh
+
+# Install neovim from latest GitHub release to /opt, matching the path zshrc expects
+NVIM_VERSION=$(curl -s https://api.github.com/repos/neovim/neovim/releases/latest | jq -r '.tag_name')
+ARCH=$(uname -m)
+if [ "$ARCH" = "aarch64" ]; then
+  NVIM_ARCH="nvim-linux-arm64"
+else
+  NVIM_ARCH="nvim-linux-x86_64"
+fi
+curl -L "https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/${NVIM_ARCH}.tar.gz" -o "/tmp/${NVIM_ARCH}.tar.gz"
+sudo rm -rf "/opt/${NVIM_ARCH}"
+sudo tar -C /opt -xzf "/tmp/${NVIM_ARCH}.tar.gz"
 
 # zsh is the default shell
 sudo chsh -s $(which zsh) $(whoami)
