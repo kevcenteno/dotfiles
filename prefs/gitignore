@@ -1,5 +1,0 @@
-*.swp
-.DS_Store
-*.swo
-
-**/.claude/settings.local.json

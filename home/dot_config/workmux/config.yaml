@@ -1,0 +1,6 @@
+nerdfont: true
+agent: claude
+panes:
+  - command: <agent>
+    focus: true
+  - split: horizontal

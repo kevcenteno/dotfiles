@@ -1,0 +1,33 @@
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+
+[pull]
+  rebase = merges
+
+[color]
+  ui = true
+
+[push]
+  default = simple
+
+[init]
+  defaultBranch = main
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[includeIf "gitdir:~/repos/"]
+  path = ~/.config/dotfiles/git-personal.conf
+
+[includeIf "gitdir:~/mm-repos/"]
+  path = ~/.config/dotfiles/git-work.conf

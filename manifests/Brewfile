@@ -1,0 +1,17 @@
+tap "homebrew/bundle"
+
+brew "age"
+brew "fzf"
+brew "git"
+brew "git-lfs"
+brew "gh"
+brew "jq"
+brew "mise"
+brew "ripgrep"
+brew "shellcheck"
+brew "shfmt"
+brew "tmux"
+brew "zsh"
+
+cask "ghostty"
+cask "font-hack-nerd-font"

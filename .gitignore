@@ -1,1 +1,6 @@
-prefs/vim/plugged
+.mise.local.toml
+.env
+.env.*
+!.env.example
+.chezmoi-test/
+.nvim-test/

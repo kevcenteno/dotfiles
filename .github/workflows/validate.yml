@@ -1,0 +1,21 @@
+name: validate
+
+on:
+  push:
+    branches: [main, chezmoi-implementation]
+  pull_request:
+
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jdx/mise-action@v2
+      - name: Validate shell, templates, and Neovim Lua syntax
+        run: mise run check
+      - name: Restore locked plugins and smoke-test Neovim startup
+        run: scripts/ci-nvim-smoke.sh

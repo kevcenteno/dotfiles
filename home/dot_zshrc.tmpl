@@ -1,0 +1,54 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="bullet-train"
+
+BULLETTRAIN_DIR_FG=011
+{{- if eq .profile "devbox" }}
+BULLETTRAIN_DIR_BG=055
+BULLETTRAIN_TIME_BG='#7e8da0'
+BULLETTRAIN_TIME_FG=black
+{{- else }}
+BULLETTRAIN_DIR_BG=027
+{{- end }}
+BULLETTRAIN_CONTEXT_BG=235
+BULLETTRAIN_CONTEXT_SHOW=true
+BULLETTRAIN_GIT_BG=235
+BULLETTRAIN_GIT_FG=white
+BULLETTRAIN_GIT_CLEAN=" %F{green}ok%F{white}"
+BULLETTRAIN_GIT_DIRTY=" %F{yellow}x%F{white}"
+BULLETTRAIN_GIT_MODIFIED=" %F{117}*%F{white}"
+BULLETTRAIN_NVM_FG=235
+BULLETTRAIN_PROMPT_ORDER=(time status custom context dir nvm git)
+
+DISABLE_AUTO_UPDATE="true"
+plugins=(git gitfast)
+
+if [ -r "$ZSH/oh-my-zsh.sh" ]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
+
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
+export EDITOR=nvim
+export VISUAL=nvim
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+alias vim=nvim
+alias vi=nvim
+alias vimdiff='nvim -d'
+
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
+
+if command -v workmux >/dev/null 2>&1; then
+  source <(workmux completions zsh)
+  alias wm=workmux
+  alias wma='workmux add'
+  alias wmrm='workmux remove'
+  alias wmls='workmux list'
+  alias wmo='workmux open'
+fi
+
+if [ -r "$HOME/.config/dotfiles/zshrc.local" ]; then
+  source "$HOME/.config/dotfiles/zshrc.local"
+fi

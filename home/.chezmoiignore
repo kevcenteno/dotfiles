@@ -1,0 +1,3 @@
+{{- if eq .profile "devbox" }}
+.config/ghostty
+{{- end }}

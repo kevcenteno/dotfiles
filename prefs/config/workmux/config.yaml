@@ -1,6 +1,0 @@
-nerdfont: true
-agent: claude
-panes:
-  - command: <agent> # Start the configured agent (e.g., claude)
-    focus: true
-  - split: horizontal # Second pane with default shell

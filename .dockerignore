@@ -1,0 +1,7 @@
+.git
+.chezmoi-test
+.nvim-test
+.env
+.env.*
+!.env.example
+

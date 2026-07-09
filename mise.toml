@@ -1,0 +1,45 @@
+min_version = "2026.6.1"
+
+[tools]
+go = "1.24.1"
+node = "22.15.1"
+python = "3.12.10"
+neovim = "0.12.3"
+chezmoi = "2.71.0"
+"npm:@bitwarden/cli" = "2026.6.0"
+
+[tasks.apply]
+description = "Apply public and private chezmoi sources"
+run = "scripts/apply.sh"
+
+[tasks.diff]
+description = "Show changes that chezmoi would apply"
+run = "scripts/diff.sh"
+
+[tasks.update-config]
+description = "Pull and apply public and private configuration after confirmation"
+run = "scripts/update-config.sh"
+
+[tasks.update-packages]
+description = "Update declared system packages after confirmation"
+run = "scripts/update-packages.sh"
+
+[tasks.update-runtimes]
+description = "Install the exact runtime versions declared in mise.toml"
+run = "mise install"
+
+[tasks.backup-prune]
+description = "Delete dotfile migration backups older than 30 days"
+run = "scripts/prune-backups.sh"
+
+[tasks.nvim-sync]
+description = "Install Neovim plugins and Mason tools from declared configuration"
+run = "nvim --headless '+Lazy! restore' \"+lua require('lazy').load({ plugins = { 'mason-lspconfig.nvim' } })\" '+MasonToolsInstallSync' +qa"
+
+[tasks.check]
+description = "Run repository validation without network access"
+run = "scripts/check.sh"
+
+[tasks.test-container]
+description = "Build an isolated Ubuntu devbox image and smoke-test bootstrap"
+run = "scripts/test-container.sh"
