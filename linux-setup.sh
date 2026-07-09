@@ -27,7 +27,6 @@ sudo apt-get update && sudo apt-get install -y \
   ripgrep \
   software-properties-common \
   tmux \
-  vim \
   zsh
 
 # Install neovim from latest GitHub release to /opt, matching the path zshrc expects
