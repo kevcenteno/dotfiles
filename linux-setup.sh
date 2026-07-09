@@ -102,4 +102,7 @@ echo ">>>"
 	&& sudo apt update \
 	&& sudo apt install gh -y
 
+# install ghostty
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+
 exec zsh
