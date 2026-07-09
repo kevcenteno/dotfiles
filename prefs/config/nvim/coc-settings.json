@@ -21,5 +21,8 @@
       "command": "gopls",
       "filetypes": ["go"]
     }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }

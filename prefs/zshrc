@@ -127,10 +127,6 @@ alias wma="workmux add"
 alias wmrm="workmux remove"
 alias wmls="workmux list"
 alias wmo="workmux open"
-compdef wma='workmux add'
-compdef wmrm='workmux remove'
-compdef wmls='workmux list'
-compdef wmo='workmux open'
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
