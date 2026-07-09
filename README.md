@@ -72,7 +72,7 @@ CONTAINER_ENGINE=podman mise run test-container
 ```
 
 On success the image is tagged `dotfiles-bootstrap-test:devbox`. Explore the
-completed test machine with:
+completed test machine as its non-root `dotfiles` user with:
 
 ```sh
 docker run --rm -it dotfiles-bootstrap-test:devbox
