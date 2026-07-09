@@ -81,6 +81,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # graphify
 uv tool install graphifyy
 
+# nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
+
 # workmux
 curl -fsSL https://raw.githubusercontent.com/raine/workmux/main/scripts/install.sh | bash
 

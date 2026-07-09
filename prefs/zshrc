@@ -10,7 +10,12 @@ ZSH_THEME="bullet-train"
 
 # bullet-train options
 BULLETTRAIN_DIR_FG=011
-BULLETTRAIN_DIR_BG=027
+# 055 (#5f00af) keeps 6.9:1 contrast against DIR_FG; 027 was only 3.6:1
+if [[ ${HOST%%.*} == devbox ]]; then
+  BULLETTRAIN_DIR_BG=055
+else
+  BULLETTRAIN_DIR_BG=027
+fi
 BULLETTRAIN_TIME_SHOW=false
 BULLETTRAIN_CONTEXT_BG=235
 BULLETTRAIN_CONTEXT_SHOW=true
