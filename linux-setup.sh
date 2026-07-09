@@ -71,7 +71,7 @@ curl https://pyenv.run | bash
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-pyenv install 3.12
+pyenv install --skip-existing 3.12
 pyenv global 3.12
 
 # uv
@@ -79,7 +79,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="$HOME/.local/bin:$PATH"
 
 # graphify
-uv tool install graphifyy
+uv tool install --reinstall graphifyy
 
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
