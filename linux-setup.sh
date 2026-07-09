@@ -63,7 +63,6 @@ curl https://mise.run | sh
 eval "$(~/.local/bin/mise activate bash)"
 mise use -g go@latest
 mise use -g node@lts
-npm install -g tree-sitter-cli
 
 # pyenv
 curl https://pyenv.run | bash
