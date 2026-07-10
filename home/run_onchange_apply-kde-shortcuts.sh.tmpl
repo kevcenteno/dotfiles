@@ -1,0 +1,34 @@
+#!/bin/sh
+# Apply curated KDE global shortcuts (see .chezmoitemplates/kde-shortcuts.conf)
+# to ~/.config/kglobalshortcutsrc. Desktop profiles only; a no-op when KDE's
+# kwriteconfig is absent (e.g. macOS or a headless box). run_onchange re-runs
+# this whenever the embedded shortcut list changes.
+set -eu
+{{ if or (eq .profile "personal") (eq .profile "work") -}}
+
+kwrite=$(command -v kwriteconfig6 || command -v kwriteconfig5 || true)
+[ -n "$kwrite" ] || exit 0  # not a KDE machine
+
+cfg="${XDG_CONFIG_HOME:-$HOME/.config}/kglobalshortcutsrc"
+
+while IFS= read -r line; do
+  case $line in
+    '' | \#*) continue ;;
+  esac
+  group=${line%%|*}
+  rest=${line#*|}
+  key=${rest%%|*}
+  value=${rest#*|}
+  # KDE stores multiple key combos separated by a tab; the source file uses a
+  # literal \t token, so turn it into a real tab before writing.
+  value=$(printf '%s' "$value" | awk '{ gsub(/\\t/, "\t"); print }')
+  "$kwrite" --file "$cfg" --group "$group" --key "$key" "$value"
+done <<'KDE_SHORTCUTS_EOF'
+{{ include ".chezmoitemplates/kde-shortcuts.conf" }}
+KDE_SHORTCUTS_EOF
+
+printf '%s\n' "==> KDE shortcuts written to $cfg"
+printf '%s\n' "    Log out/in (or run: kquitapp6 kglobalaccel) to load them in this session."
+{{ else -}}
+exit 0
+{{ end -}}
