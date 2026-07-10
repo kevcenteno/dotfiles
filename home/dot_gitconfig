@@ -26,7 +26,9 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 
-[includeIf "gitdir:~/repos/"]
+# Personal identity is the default everywhere; work overrides under ~/mm-repos/.
+# The included files live in the private overlay (dotfiles-private), not here.
+[include]
   path = ~/.config/dotfiles/git-personal.conf
 
 [includeIf "gitdir:~/mm-repos/"]
