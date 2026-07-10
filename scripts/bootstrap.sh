@@ -45,6 +45,7 @@ mkdir -p "$DOTFILES_STATE_DIR"
 touch "$DOTFILES_STATE_DIR/public-installed"
 
 mise install
+mise reshim --force
 "$SCRIPT_DIR/install-workmux.sh"
 "$SCRIPT_DIR/private-overlay.sh"
 "$SCRIPT_DIR/set-default-shell.sh"

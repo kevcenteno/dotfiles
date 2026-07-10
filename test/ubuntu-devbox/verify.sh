@@ -40,6 +40,7 @@ for command in chezmoi git mise nvim tmux tree-sitter workmux zsh; do
 done
 
 tree-sitter --version
+nvim --version
 
 if [ -e "$HOME/.config/ghostty/config" ]; then
   printf '%s\n' 'Ghostty must not be managed for the devbox profile' >&2
