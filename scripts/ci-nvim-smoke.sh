@@ -4,7 +4,7 @@ set -eu
 
 REPO_DIR=$(CDPATH='' cd -- "$(dirname -- "$0")/.." && pwd)
 tmp=$(mktemp -d)
-trap 'rm -rf "$tmp"' EXIT
+trap 'rm -rf "$tmp" || :' EXIT
 
 mkdir -p "$tmp/config" "$tmp/data" "$tmp/state"
 ln -s "$REPO_DIR/home/dot_config/nvim" "$tmp/config/nvim"
