@@ -35,9 +35,11 @@ require_file "$HOME/.tmux.conf"
 require_file "$HOME/.config/nvim/init.lua"
 require_file "$HOME/.config/workmux/config.yaml"
 
-for command in chezmoi git mise nvim tmux workmux zsh; do
+for command in chezmoi git mise nvim tmux tree-sitter workmux zsh; do
   require_command "$command"
 done
+
+tree-sitter --version
 
 if [ -e "$HOME/.config/ghostty/config" ]; then
   printf '%s\n' 'Ghostty must not be managed for the devbox profile' >&2

@@ -7,6 +7,7 @@ python = "3.12.10"
 neovim = "0.12.3"
 chezmoi = "2.71.0"
 "npm:@bitwarden/cli" = "2026.6.0"
+"npm:tree-sitter-cli" = { version = "0.26.10", npm_args = "--ignore-scripts=false" }
 
 [tasks.apply]
 description = "Apply public and private chezmoi sources"
@@ -34,7 +35,7 @@ run = "scripts/prune-backups.sh"
 
 [tasks.nvim-sync]
 description = "Install Neovim plugins and Mason tools from declared configuration"
-run = "nvim --headless '+Lazy! restore' \"+lua require('lazy').load({ plugins = { 'mason-lspconfig.nvim' } })\" '+MasonToolsInstallSync' +qa"
+run = "nvim --headless '+Lazy! restore' \"+lua require('lazy').load({ plugins = { 'mason-lspconfig.nvim', 'tree-sitter-manager.nvim' } })\" '+MasonToolsInstallSync' +qa"
 
 [tasks.check]
 description = "Run repository validation without network access"

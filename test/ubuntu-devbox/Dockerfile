@@ -43,6 +43,9 @@ ENV DOTFILES_PROFILE=devbox \
 
 RUN ./bootstrap
 RUN sh test/ubuntu-devbox/verify.sh
+RUN printf '%s\n' 'package main' 'func main() {}' > /tmp/sample.go \
+    && mise exec -- nvim --headless /tmp/sample.go \
+      "+lua assert(vim.wait(180000, function() return vim.uv.fs_stat(vim.fn.stdpath('data') .. '/site/parser/go.so') ~= nil end, 250), 'timed out waiting for the Go parser')" +qa
 RUN chown -R dotfiles:dotfiles "$HOME"
 
 USER dotfiles

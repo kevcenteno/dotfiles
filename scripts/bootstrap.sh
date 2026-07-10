@@ -32,6 +32,7 @@ case "$(uname -s)" in
 esac
 
 require_command mise
+mise trust "$REPO_DIR/mise.toml"
 mise install chezmoi
 chezmoi_dir="$(mise where chezmoi)"
 export PATH="$chezmoi_dir:$PATH"
