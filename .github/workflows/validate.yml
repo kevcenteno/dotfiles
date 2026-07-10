@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v2
-      - name: Install declared tools
-        run: mise install
+      - name: Reinstall Neovim
+        run: mise install --force neovim
       - name: Validate shell, templates, and Neovim Lua syntax
         run: mise run check
       - name: Restore locked plugins and smoke-test Neovim startup
